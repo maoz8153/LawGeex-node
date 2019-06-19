@@ -13,7 +13,7 @@ export class MovieController {
     public async searchMovies(request: Request, responce: Response) {
         try {
             const result = await this.imdbSearchService.searchMovies(request.query);
-            responce.send(result);
+            responce.send(result.results);
         } catch (error) {
             responce.status(500).send(error);
         }
