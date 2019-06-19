@@ -12,6 +12,7 @@ export class MovieRoute {
 
     private createRoutes(router: Router) {
         router.get('/api/movies', this.movieController.searchMovies.bind(this.movieController));
+        router.get('/api/movies/:id', this.movieController.getMovieInfo.bind(this.movieController));
     }
 
 }

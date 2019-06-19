@@ -19,6 +19,15 @@ export class MovieController {
         }
     }
 
+    public async getMovieInfo(request: Request, responce: Response) {
+        try {
+            const result = await this.imdbSearchService.getMovieById(request.params.id);
+            responce.send(result);
+        } catch (error) {
+            responce.status(500).send(error);
+        }
+    }
+
 
 
 }

@@ -1,6 +1,6 @@
 
 export interface MovieQuary {
     title: string;
-    year?: number;
-    page?: number;
+    year?: string;
+    page?: string;
 }
