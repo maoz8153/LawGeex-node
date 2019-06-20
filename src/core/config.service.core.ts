@@ -4,7 +4,6 @@ import { config } from "dotenv"
 export interface IConfig {
     NODE_ENV: string;
     NODE_PORT: number;
-    MONGO_NODE_URL: string;
 }
 
 export class ConfigService {
